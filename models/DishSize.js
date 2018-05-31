@@ -9,7 +9,14 @@ var DishSizeSchema = new mongoose.Schema({
   size_limit: Number,
   size_promotions: Array,  // 适用优惠
   size_coupons: Array,     // 适用优惠券
-  size_sales_volume: Number,
+
+  // size_today_rest: Number,  // 今日剩餘
+  size_stock: Number,     // 库存
+  size_on_sale: Boolean,  // 上架 状态
+  is_default: Boolean,    // 是否为默认 被选
+  is_selected: { type: Boolean, default: false },
+
+  size_sales_volume: Number,  // 销量
   size_remark: String,
   // create_date: { type: Date, default: Date.now },
   // update_date: { type: Date, default: Date.now },
@@ -17,10 +24,6 @@ var DishSizeSchema = new mongoose.Schema({
   update_date: Date,
   create_by: String,
   update_by: String,
-  size_today_rest: Number,  // 今日剩餘
-  is_default: Boolean,
-  size_on_sale: Boolean,
-  is_selected: { type: Boolean, default: false },
   mark_del: { type: Boolean, default: false }
 });
 
