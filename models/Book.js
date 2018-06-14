@@ -8,7 +8,7 @@ var BookSchema = new mongoose.Schema({
   publisher: String,
   price: String,
   description: String,
-  updated_data: { type: Date, default: Date.now }
+  updated_date: { type: Date, default: Date.now }
 });
 
 module.exports = mongoose.model('Book', BookSchema);
