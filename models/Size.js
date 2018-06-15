@@ -1,9 +1,11 @@
 var mongoose = require('mongoose');
 
 var SizeSchema = new mongoose.Schema({
-  size_value: String,
+  size_value_name: String,
   size_value_description: String,
   size_value_sort: Number,
+
+  size_value_remark: String,
 
   size_group_ID: String,
   size_group_name: String,

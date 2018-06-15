@@ -5,6 +5,8 @@ var SizeGroupSchema = new mongoose.Schema({
   size_group_description: String,
   size_group_sort: Number,
 
+  size_group_remark: String,
+
   create_date: Date,
   update_date: Date,
   create_by: String,

@@ -21,6 +21,7 @@ router.get('/:id', function(req, res, next) {
 
 /* Save CartLine */
 router.post('/', function(req, res, next) {
+  req.body.mark_del = false;
   req.body.create_date = Date.now();
   req.body.update_date = Date.now();
   req.body.update_by = req.body.create_by;
